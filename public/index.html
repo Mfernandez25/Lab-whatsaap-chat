@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+<body>
+	<h1>Hola víctima jajajajaajaj</h1>
+	<input type="text" id="mensaje"/>
+	<button onclick="enviarMensaje()">Enviar mensaje</button>
+	<ul id="lista_mensajes"></ul>
+	<button onclick="limpiarMensajes()"> Limpiar mensajes</button>
+
+<script>
+	var socket = io('/');
+
+	function enviarMensaje()
+	{
+		socket.emit('chat', $('#mensaje').val() );
+	}
+
+	function limpiarMensajes()
+	{
+		$('#lista_mensajes').html('');
+	}
+
+	socket.on('nuevo_mensaje' ,function (_msg)
+	{
+		$('#lista_mensajes').append('<li>' + _msg + '</li>');
+	});
+</script>
+</body>
+</html>
