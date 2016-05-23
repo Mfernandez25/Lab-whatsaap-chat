@@ -1,23 +1,23 @@
 {
   "name": "whatsapp",
   "version": "1.0.0",
-  "description": "chat de whatsapp en node js",
+  "description": "Chat de whatapp en node js",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://Mfernandez25@github.com/Mfernandez25/Lab-whatsaap-chat.git"
+    "url": "git+https://GersonM@github.com/GersonM/whatsapp_chat.git"
   },
-  "author": "Merle",
+  "author": "Gerson Aduviri",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Mfernandez25/Lab-whatsaap-chat/issues"
+    "url": "https://github.com/GersonM/whatsapp_chat/issues"
   },
-  "homepage": "https://github.com/Mfernandez25/Lab-whatsaap-chat#readme",
+  "homepage": "https://github.com/GersonM/whatsapp_chat#readme",
   "dependencies": {
     "express": "^4.13.4",
-    "socket.io": "1.4.6"
+	"socket.io": "^1.4.6"
   }
 }

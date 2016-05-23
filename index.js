@@ -7,16 +7,24 @@ app.get('/', function(req, res){
 	res.sendFile(__dirname + '/public/index.html');
 });
 
-''
+
 io.on('connection', function(socket){
-	console.log('tenemos una nueva victima');
+	console.log('Tenemos una nueva victima!!');
 
 	socket.on('chat', function(_msg){
-		io.emit('nuevo_mensaje',_msg);
-		});
+		io.emit('nuevo_mensaje', _msg);
+	});
 
 });
 
-http.listen(8080, function(){
-	console.log('Express run on port 8080');
+
+
+
+
+
+
+
+
+http.listen(8080, function () {
+	console.log('Muy bien!, eres un crack, sabes trabajar con node JS');
 });
